@@ -46,13 +46,10 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-#vscode
-<<<<<<< HEAD
-.vscode/
-
-#build web linux macos test windows
-web/
-windows/
-test/
-macos/
-linux/
+#error files
+/.vscode
+/test
+/web
+/windows
+/linux
+/macos
