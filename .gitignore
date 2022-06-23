@@ -45,3 +45,12 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+#vscode
+/.vscode/
+
+#build web linux macos test windows
+/web
+/windows
+/test
+/macos
