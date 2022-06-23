@@ -47,6 +47,7 @@ app.*.map.json
 /android/app/release
 
 #vscode
+<<<<<<< HEAD
 .vscode/
 
 #build web linux macos test windows
@@ -55,3 +56,12 @@ windows/
 test/
 macos/
 linux/
+=======
+/.vscode/
+
+#build web linux macos test windows
+/web
+/windows
+/test
+/macos
+>>>>>>> 83551ca914ea06a780537d285f1d05b2cbe62dd9
