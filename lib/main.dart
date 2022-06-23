@@ -11,6 +11,7 @@ class BMICalculator extends StatelessWidget {
         primaryColor: Color(0xFF0A0E21),
         scaffoldBackgroundColor: Color(0xFF0A0E21),
       ),
+      //created a separate dart file to reduce code on the main.dart file
       home: InputPage(),
     );
   }
