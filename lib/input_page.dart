@@ -20,30 +20,10 @@ class InputPage extends StatefulWidget {
   @override
   State<InputPage> createState() => _InputPageState();
 }
+  Gender? selectedGender;
 
-//setting a variable for the active color
-Color maleCardColor = inactiveCardColour;
-Color femaleCardColor = inactiveCardColour;
-//create a function (conditional) to show the color when either a male card or female card is pressed
-void updateColour (Gender selectedGender){
-  //1 == male and 2 ==  female
-  if (selectedGender == Gender.male){
-    if(maleCardColor == inactiveCardColour){
-      maleCardColor = activeCardColour;
-      femaleCardColor = inactiveCardColour;
-    } else {
-      maleCardColor = inactiveCardColour;
-    }
-  }
-  if (selectedGender == Gender.female){
-    if(femaleCardColor == inactiveCardColour){
-      femaleCardColor = activeCardColour;
-      maleCardColor = inactiveCardColour;
-    } else {
-      femaleCardColor = inactiveCardColour;
-    }
-  }
-} 
+
+
 class _InputPageState extends State<InputPage> {
   @override
   Widget build(BuildContext context) {
@@ -61,11 +41,11 @@ class _InputPageState extends State<InputPage> {
                   child:GestureDetector(
                     onTap: (){
                       setState(() {
-                        updateColour(Gender.male);
+                        selectedGender = Gender.male;
                       });
                     },
                     child: ReusableCard(
-                      colour: maleCardColor,
+                      colour: selectedGender == Gender.male ? activeCardColour : inactiveCardColour,
                       //extracted the column widget
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.mars,
@@ -78,11 +58,11 @@ class _InputPageState extends State<InputPage> {
                   child:GestureDetector(
                     onTap: () {
                       setState(() {
-                        updateColour(Gender.female);
+                        selectedGender = Gender.female;
                       });
                     },
                     child: ReusableCard(
-                      colour: femaleCardColor,
+                      colour: selectedGender == Gender.male ? activeCardColour : inactiveCardColour,
                       //note the reusable class has two properties one for color and the other for cardchild
                       //cardChild has a class named icon content
                       //icon content has two properties icon and label
