@@ -44,6 +44,9 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child:ReusableCard(
                     colour: activeCardColour,
+                    //note the reusable class has two properties one for color and the other for cardchild
+                    //cardChild has a class named icon content
+                    //icon content has two properties icon and label
                      cardChild: IconContent(
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE',
