@@ -38,38 +38,34 @@ class _InputPageState extends State<InputPage> {
               // ignore: prefer_const_literals_to_create_immutables
               children: <Widget>[
                 Expanded(
-                  child:GestureDetector(
-                    onTap: (){
+                  child:ReusableCard(
+                    onPress: (){
                       setState(() {
                         selectedGender = Gender.male;
                       });
                     },
-                    child: ReusableCard(
-                      colour: selectedGender == Gender.male ? activeCardColour : inactiveCardColour,
-                      //extracted the column widget
-                      cardChild: IconContent(
-                        icon: FontAwesomeIcons.mars,
-                        label: 'MALE',
-                      ),
-                     ),
-                  ),
+                    colour: selectedGender == Gender.male ? activeCardColour : inactiveCardColour,
+                    //extracted the column widget
+                    cardChild: IconContent(
+                      icon: FontAwesomeIcons.mars,
+                      label: 'MALE',
+                    ),
+                   ),
                 ),
                 Expanded(
-                  child:GestureDetector(
-                    onTap: () {
+                  child:ReusableCard(
+                    onPress: (){
                       setState(() {
                         selectedGender = Gender.female;
                       });
                     },
-                    child: ReusableCard(
-                      colour: selectedGender == Gender.male ? activeCardColour : inactiveCardColour,
-                      //note the reusable class has two properties one for color and the other for cardchild
-                      //cardChild has a class named icon content
-                      //icon content has two properties icon and label
-                       cardChild: IconContent(
-                        icon: FontAwesomeIcons.venus,
-                        label: 'FEMALE',
-                      ),
+                    colour: selectedGender == Gender.female ? activeCardColour : inactiveCardColour,
+                    //note the reusable class has two properties one for color and the other for cardchild
+                    //cardChild has a class named icon content
+                    //icon content has two properties icon and label
+                     cardChild: IconContent(
+                      icon: FontAwesomeIcons.venus,
+                      label: 'FEMALE',
                     ),
                   ),
                 ),
