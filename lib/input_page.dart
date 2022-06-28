@@ -98,17 +98,28 @@ class _InputPageState extends State<InputPage> {
                       )
                     ],
                   ),
-                  Slider(
-                    value: height.toDouble(),
-                    min: 120.0,
-                    max: 220.0,
-                    activeColor: Color(0xFFEB1555),
-                    inactiveColor: Color(0xff8d8e98),
-                    onChanged: (double newValue) {
-                      setState(() {
-                        height =  newValue.round();
-                      });
-                    }
+                  SliderTheme(
+                    //you can copy the slider theme to d theme data in main.dart from here
+                    data: SliderTheme.of(context).copyWith(
+                      inactiveTickMarkColor: Color(0xff8d8e98),
+                      activeTrackColor: Colors.white,
+                      overlayColor: Color(0x29eb1555),
+                      thumbColor: Color(0xffeb1555),
+                      thumbShape:
+                       RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                      overlayShape:
+                       RoundSliderOverlayShape(overlayRadius: 30.0),
+                    ),
+                    child: Slider(
+                      value: height.toDouble(),
+                      min: 120.0,
+                      max: 220.0,
+                      onChanged: (double newValue) {
+                        setState(() {
+                          height =  newValue.round();
+                        });
+                      }
+                    ),
                   )
                 ],
               ),
