@@ -1,0 +1,108 @@
+[33mcommit 46c0ff52bea315094111ad296773d86320ecb5df[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Sat Jun 25 01:00:59 2022 +0100
+
+    worked on putting the gesturedetector in the reusable class and adding the onPress property with a function of onTap
+
+[33mcommit 90cfb7b5a621eb2eb53effb52d866cdd52bb8493[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Sat Jun 25 00:49:52 2022 +0100
+
+    the ternary operator to reduce the if else condition
+
+[33mcommit 7e4ad7d9f708aa1a9761f39d5e5beb10778dfc4a[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Sat Jun 25 00:38:32 2022 +0100
+
+    enum for male and female gender
+
+[33mcommit e20e442ce0b39957ed82934e2209ba335947f9ed[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Fri Jun 24 02:16:11 2022 +0100
+
+    made icons interactive and used gesturedetector
+
+[33mcommit 1bc7131f507e2913c059203da1c45a3e08cd60c1[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Fri Jun 24 01:41:55 2022 +0100
+
+    comment on reusable card and icon content
+
+[33mcommit 5651c571006de18226e4998b491fa42f1b17a401[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Fri Jun 24 01:37:45 2022 +0100
+
+    created a separate file for both the icon and card design
+
+[33mcommit a7859bba40855ca3753b309c6cf5a8fa3f026dc2[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Fri Jun 24 01:23:05 2022 +0100
+
+    font awesome package and card design
+
+[33mcommit ed5bad0bc6e1890ee0eef33bf38dd1936e7d7226[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Fri Jun 24 00:35:34 2022 +0100
+
+    comment on a separate file
+
+[33mcommit ef3fbef02e3184f4b36c51a61259a38cfca5664f[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Thu Jun 23 03:04:37 2022 +0100
+
+    another gitignore change
+
+[33mcommit 233c6bd6b0fdbf36e3195450573d75e2585c100c[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Thu Jun 23 02:57:51 2022 +0100
+
+    conflict in gitignore
+
+[33mcommit e9072118d929f4ffc6b8647548844678792ab174[m
+Merge: 5c48d05 83551ca
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Thu Jun 23 02:56:30 2022 +0100
+
+    git igonre
+
+[33mcommit 5c48d05119d5af666e052163c63d7f6f5749d391[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Thu Jun 23 02:52:32 2022 +0100
+
+    ignore some files
+
+[33mcommit 83551ca914ea06a780537d285f1d05b2cbe62dd9[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Thu Jun 23 02:48:54 2022 +0100
+
+    .vscode! macos! windows! web! test!
+
+[33mcommit 2416f15441fd705b538c1dd2867085b2cb52a1ad[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Thu Jun 23 02:38:51 2022 +0100
+
+    Started the structure in our input page
+
+[33mcommit d237aa47f08050d96c9f4bdd3e2f8293cd8e5055[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Thu Jun 23 01:41:32 2022 +0100
+
+    added an input page
+
+[33mcommit cac668ba378ce6eb5df3ea9550359037861865c8[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Thu Jun 23 00:50:46 2022 +0100
+
+    changed line 16 from MyApp to BMICalculator
+
+[33mcommit d49f23a0eeb2a3bdb9fae2ab6ef65a488f02b627[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Wed Jun 22 18:50:00 2022 +0100
+
+    Added andriod and ios icons and changed main.dart
+
+[33mcommit 4d67add67b4bb6ea8b9b8b1f1deb755d6a16aaf0[m
+Author: Oluwatuyi Abiola <abiolaoluwatuyi@gmail.com>
+Date:   Wed Jun 22 18:39:06 2022 +0100
+
+    A Flutter BMI Calculator

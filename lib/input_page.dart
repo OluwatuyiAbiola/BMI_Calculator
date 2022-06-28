@@ -5,12 +5,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 //importing both icon and card design from created modules
 import 'Icon_content.dart';
 import 'Reusable_card.dart';
+import 'constant.dart';
 
 //create a variable
-const bottomContainerHeight = 80.0;
-const activeCardColour = Color(0xff1d1e33);
-const bottomContainerColour = Color(0xffeb1555);
-const inactiveCardColour =  Color(0xff111328);
+
 
 enum Gender{male, female}
 
@@ -44,7 +42,7 @@ class _InputPageState extends State<InputPage> {
                         selectedGender = Gender.male;
                       });
                     },
-                    colour: selectedGender == Gender.male ? activeCardColour : inactiveCardColour,
+                    colour: selectedGender == Gender.male ? kActiveCardColour : kInactiveCardColour,
                     //extracted the column widget
                     cardChild: IconContent(
                       icon: FontAwesomeIcons.mars,
@@ -59,7 +57,7 @@ class _InputPageState extends State<InputPage> {
                         selectedGender = Gender.female;
                       });
                     },
-                    colour: selectedGender == Gender.female ? activeCardColour : inactiveCardColour,
+                    colour: selectedGender == Gender.female ? kActiveCardColour : kInactiveCardColour,
                     //note the reusable class has two properties one for color and the other for cardchild
                     //cardChild has a class named icon content
                     //icon content has two properties icon and label
@@ -74,7 +72,12 @@ class _InputPageState extends State<InputPage> {
             ),
            Expanded(
             child:ReusableCard(
-              colour: activeCardColour,
+              colour: kActiveCardColour,
+              cardChild: Column(
+                children: <Widget>[
+
+                ],
+              ),
             ), 
             ),
           Expanded(
@@ -84,22 +87,22 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   //extracted a widget for cards
                   child:ReusableCard(
-                    colour: activeCardColour,
+                    colour: kActiveCardColour,
                   ),
                   ),
                 Expanded(
                   child:ReusableCard(
-                    colour: activeCardColour,
+                    colour: kActiveCardColour,
                   ),
                 ),
               ],
             ),
           ),
           Container(
-            color: bottomContainerColour,
+            color: kBottomContainerColour,
             margin: EdgeInsets.only(top: 10.0),
             width: double.infinity,
-            height: bottomContainerHeight,
+            height: kBottomContainerHeight,
           )
         ],
 
