@@ -8,6 +8,7 @@ import 'package:bmi_calculator/components/Icon_content.dart';
 import 'package:bmi_calculator/components/Reusable_card.dart';
 import '../constant.dart';
 import 'result_page.dart';
+import 'package:bmi_calculator/calculator_brain.dart';
 //create a variable
 
 
@@ -301,10 +302,16 @@ class _InputPageState extends State<InputPage> {
           ),
           GestureDetector(
             onTap:(){
+              CalculatorBrain calc =
+               CalculatorBrain(height:height , weight:weight);
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: ((context) => ResultPage()
+                  builder: ((context) => ResultPage(
+                    bmiResult: calc.calculateBMI(),
+                    interpretation: calc.getResult(), 
+                    resultText: calc.getInterpretation(),
+                  )
                 )
               )
               );
