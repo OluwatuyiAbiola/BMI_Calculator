@@ -41,35 +41,50 @@ class _InputPageState extends State<InputPage> {
               // ignore: prefer_const_literals_to_create_immutables
               children: <Widget>[
                 Expanded(
-                  child:ReusableCard(
-                    onPress: (){
+                  child:GestureDetector(
+                    onTap: () {
                       setState(() {
                         selectedGender = Gender.male;
                       });
                     },
-                    colour: selectedGender == Gender.male ? kActiveCardColour : kInactiveCardColour,
-                    //extracted the column widget
-                    cardChild: IconContent(
-                      icon: FontAwesomeIcons.mars,
-                      label: 'MALE',
-                    ),
-                   ),
+                    child: ReusableCard(
+                      // onPress: (){
+                      //   setState(() {
+                      //     selectedGender = Gender.male;
+                      //   });
+                      // },
+                      colour: selectedGender == Gender.male ? kActiveCardColour : kInactiveCardColour,
+                      //extracted the column widget
+                      cardChild: IconContent(
+                        icon: FontAwesomeIcons.mars,
+                        label: 'MALE',
+                      ),
+                     ),
+                  ),
                 ),
                 Expanded(
-                  child:ReusableCard(
-                    onPress: (){
+                  child:GestureDetector(
+                    onTap: () {
                       setState(() {
                         selectedGender = Gender.female;
                       });
                     },
-                    colour: selectedGender == Gender.female ? kActiveCardColour : kInactiveCardColour,
-                    //note the reusable class has two properties one for color and the other for cardchild
-                    //cardChild has a class named icon content
-                    //icon content has two properties icon and label
-                     cardChild: IconContent(
-                      icon: FontAwesomeIcons.venus,
-                      label: 'FEMALE',
-                    ),
+                    child: ReusableCard(
+                      // onPress: (){
+                      //   setState(() {
+                      //     selectedGender = Gender.female;
+                      //   });
+                      // },
+                      colour: selectedGender == Gender.female ? kActiveCardColour : kInactiveCardColour,
+                      //note the reusable class has two properties one for color and the other for cardchild
+                      //cardChild has a class named icon content
+                      //icon content has two properties icon and label
+                       cardChild: IconContent(
+                        icon: FontAwesomeIcons.venus,
+                        label: 'FEMALE',
+                      ),
+
+                  ),
                   ),
                 ),
               ],
@@ -77,7 +92,6 @@ class _InputPageState extends State<InputPage> {
             ),
            Expanded(
             child:ReusableCard(
-              onPress: (){},
               colour: kActiveCardColour,
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -136,7 +150,6 @@ class _InputPageState extends State<InputPage> {
                   //extracted a widget for cards
                   child:ReusableCard(
                     colour: kActiveCardColour,
-                    onPress: (){},
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -149,26 +162,59 @@ class _InputPageState extends State<InputPage> {
                           style: kNumberTextStyle,
                         ),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            RoundIconButton(
-                              icon: FontAwesomeIcons.minus,
+                            RawMaterialButton(
                               onPressed: (){
                                 setState(() {
                                   weight--;
                                 });
                               },
+                              
+                              elevation: 6.0,
+                              constraints: BoxConstraints.tightFor(
+                                width: 56.0,
+                                height: 56.0,
+                              ),
+                              shape: CircleBorder(),
+                              fillColor: Color(0xff4c4f54),
+                              child: Icon(FontAwesomeIcons.minus),
                             ),
+                            // RoundIconButton(
+                            //   icon: FontAwesomeIcons.minus,
+                            //   onPressed: (){
+                            //     setState(() {
+                            //       weight--;
+                            //     });
+                            //   },
+                            // ),
                             SizedBox(
                               width: 10.0,
                             ),
-                            RoundIconButton(
-                              icon: FontAwesomeIcons.plus,
-                              onPressed: (){
+                            RawMaterialButton(
+                                onPressed: (){
                                 setState(() {
                                   weight++;
                                 });
                               },
+                              
+                              elevation: 6.0,
+                              constraints: BoxConstraints.tightFor(
+                                width: 56.0,
+                                height: 56.0,
+                              ),
+                              shape: CircleBorder(),
+                              fillColor: Color(0xff4c4f54),
+                              child: Icon(FontAwesomeIcons.plus),
                             )
+                            // RoundIconButton(
+                            //   icon: FontAwesomeIcons.plus,
+                            //   onPressed: (){
+                            //     setState(() {
+                            //       weight++;
+                            //     });
+                            //   },
+                            // )
                           ],
                         )
                       ],
@@ -178,7 +224,6 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child:ReusableCard(
                     colour: kActiveCardColour,
-                    onPress: (){},
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -191,26 +236,59 @@ class _InputPageState extends State<InputPage> {
                           style: kNumberTextStyle,
                         ),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            RoundIconButton(
-                              icon: FontAwesomeIcons.minus,
+                            RawMaterialButton(
                               onPressed: (){
                                 setState(() {
                                   age--;
                                 });
                               },
+                              
+                              elevation: 6.0,
+                              constraints: BoxConstraints.tightFor(
+                                width: 56.0,
+                                height: 56.0,
+                              ),
+                              shape: CircleBorder(),
+                              fillColor: Color(0xff4c4f54),
+                              child: Icon(FontAwesomeIcons.minus),
                             ),
+                            // RoundIconButton(
+                            //   icon: FontAwesomeIcons.minus,
+                            //   onPressed: (){
+                            //     setState(() {
+                            //       age--;
+                            //     });
+                            //   },
+                            // ),
                             SizedBox(
                               width: 10.0,
                             ),
-                            RoundIconButton(
-                              icon: FontAwesomeIcons.plus,
-                              onPressed: (){
+                            RawMaterialButton(
+                                onPressed: (){
                                 setState(() {
                                   age++;
                                 });
                               },
+                              
+                              elevation: 6.0,
+                              constraints: BoxConstraints.tightFor(
+                                width: 56.0,
+                                height: 56.0,
+                              ),
+                              shape: CircleBorder(),
+                              fillColor: Color(0xff4c4f54),
+                              child: Icon(FontAwesomeIcons.plus),
                             )
+                            // RoundIconButton(
+                            //   icon: FontAwesomeIcons.plus,
+                            //   onPressed: (){
+                            //     setState(() {
+                            //       age++;
+                            //     });
+                            //   },
+                            // )
                           ],
                         )
                       ],
@@ -222,7 +300,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Container(
             color: kBottomContainerColour,
-            margin: EdgeInsets.only(top: 10.0),
+            // margin: EdgeInsets.only(top: 10.0),
             width: double.infinity,
             height: kBottomContainerHeight,
           )
@@ -235,27 +313,27 @@ class _InputPageState extends State<InputPage> {
 }
 
 
-class RoundIconButton extends StatelessWidget {
-  RoundIconButton({IconData? icon, Function? onPressed});
+// class RoundIconButton extends StatelessWidget {
+//   const RoundIconButton({required this.icon, required this.onPressed});
 
-  IconData? icon;
-  Function? onPressed;
+//   final IconData icon;
+//   final Function onPressed;
 
-  @override
-  Widget build(BuildContext context) {
+//   @override
+//   Widget build(BuildContext context) {
     
-    return RawMaterialButton(
-      onPressed: onPressed!(),
+//     return RawMaterialButton(
+//       onPressed: onPressed(),
       
-      elevation: 6.0,
-      constraints: BoxConstraints.tightFor(
-        width: 56.0,
-        height: 56.0,
-      ),
-      shape: CircleBorder(),
-      fillColor: Color(0xff4c4f54),
-      child: Icon(icon),
-    );
-  }
-}
+//       elevation: 6.0,
+//       constraints: BoxConstraints.tightFor(
+//         width: 56.0,
+//         height: 56.0,
+//       ),
+//       shape: CircleBorder(),
+//       fillColor: Color(0xff4c4f54),
+//       child: Icon(icon),
+//     );
+//   }
+// }
 
