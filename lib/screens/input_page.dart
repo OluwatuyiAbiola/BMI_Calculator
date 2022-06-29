@@ -1,12 +1,12 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:bmi_calculator/result_page.dart';
+import 'package:bmi_calculator/screens/result_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 //importing both icon and card design from created modules
-import 'Icon_content.dart';
-import 'Reusable_card.dart';
-import 'constant.dart';
+import 'package:bmi_calculator/components/Icon_content.dart';
+import 'package:bmi_calculator/components/Reusable_card.dart';
+import '../constant.dart';
 import 'result_page.dart';
 //create a variable
 
@@ -312,10 +312,14 @@ class _InputPageState extends State<InputPage> {
             child: Container(
               color: kBottomContainerColour,
               // margin: EdgeInsets.only(top: 10.0),
+              padding: EdgeInsets.only(bottom: 10.0),
               width: double.infinity,
               height: kBottomContainerHeight,
-              child: Text(
-                'CALCULATE'
+              child: Center(
+                child: Text(
+                  'CALCULATE',
+                  style: kLargeButtonTextStyle,
+                ),
               ),
             ),
           )
