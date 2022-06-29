@@ -21,6 +21,8 @@ class InputPage extends StatefulWidget {
   Gender? selectedGender;
 
   int height = 180;
+  int weight = 60;
+  int age = 20;
 
 
 
@@ -75,6 +77,7 @@ class _InputPageState extends State<InputPage> {
             ),
            Expanded(
             child:ReusableCard(
+              onPress: (){},
               colour: kActiveCardColour,
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -133,11 +136,85 @@ class _InputPageState extends State<InputPage> {
                   //extracted a widget for cards
                   child:ReusableCard(
                     colour: kActiveCardColour,
+                    onPress: (){},
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'WEIGHT',
+                          style: kLabelTextStyle,
+                        ),
+                        Text(
+                          weight.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.minus,
+                              onPressed: (){
+                                setState(() {
+                                  weight--;
+                                });
+                              },
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.plus,
+                              onPressed: (){
+                                setState(() {
+                                  weight++;
+                                });
+                              },
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                   ),
                 Expanded(
                   child:ReusableCard(
                     colour: kActiveCardColour,
+                    onPress: (){},
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'AGE',
+                          style: kLabelTextStyle,
+                        ),
+                        Text(
+                          age.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.minus,
+                              onPressed: (){
+                                setState(() {
+                                  age--;
+                                });
+                              },
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.plus,
+                              onPressed: (){
+                                setState(() {
+                                  age++;
+                                });
+                              },
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -157,4 +234,28 @@ class _InputPageState extends State<InputPage> {
   }
 }
 
+
+class RoundIconButton extends StatelessWidget {
+  RoundIconButton({IconData? icon, Function? onPressed});
+
+  IconData? icon;
+  Function? onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    
+    return RawMaterialButton(
+      onPressed: onPressed!(),
+      
+      elevation: 6.0,
+      constraints: BoxConstraints.tightFor(
+        width: 56.0,
+        height: 56.0,
+      ),
+      shape: CircleBorder(),
+      fillColor: Color(0xff4c4f54),
+      child: Icon(icon),
+    );
+  }
+}
 
